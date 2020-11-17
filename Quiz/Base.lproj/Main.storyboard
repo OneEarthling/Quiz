@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15L-l8-5Cm">
+                                <rect key="frame" x="194.66666666666666" y="116" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBs-Vs-cST">
+                                <rect key="frame" x="194.66666666666666" y="342" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zea-yy-lGP">
+                                <rect key="frame" x="158" y="153" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fzn-7B-2xH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vm8-KR-9BD">
+                                <rect key="frame" x="160.66666666666666" y="371" width="93" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kpz-xy-Bmx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zea-yy-lGP" firstAttribute="top" secondItem="15L-l8-5Cm" secondAttribute="bottom" constant="16" id="2im-9D-f0d"/>
+                            <constraint firstItem="15L-l8-5Cm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EX7-tA-3wo"/>
+                            <constraint firstItem="QBs-Vs-cST" firstAttribute="centerX" secondItem="Zea-yy-lGP" secondAttribute="centerX" id="gg0-JI-Dlu"/>
+                            <constraint firstItem="QBs-Vs-cST" firstAttribute="top" secondItem="Zea-yy-lGP" secondAttribute="bottom" constant="159" id="iXW-ed-rUx"/>
+                            <constraint firstItem="15L-l8-5Cm" firstAttribute="centerX" secondItem="Zea-yy-lGP" secondAttribute="centerX" id="k3G-bp-zJH"/>
+                            <constraint firstItem="vm8-KR-9BD" firstAttribute="centerX" secondItem="Zea-yy-lGP" secondAttribute="centerX" id="svi-4L-G7m"/>
+                            <constraint firstItem="vm8-KR-9BD" firstAttribute="top" secondItem="QBs-Vs-cST" secondAttribute="bottom" constant="8" symbolic="YES" id="w2a-yE-tFA"/>
+                            <constraint firstItem="15L-l8-5Cm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="zg6-Vt-6AR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="QBs-Vs-cST" id="wO0-Lc-aeX"/>
+                        <outlet property="questionLabel" destination="15L-l8-5Cm" id="s1S-cd-evX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
